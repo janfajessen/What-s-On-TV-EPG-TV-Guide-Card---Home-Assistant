@@ -1,32 +1,41 @@
-# What's On TV - EPG TV Guide<br>Lovelace Card
-
-A Lovelace card that turns your What's On TV sensors into a beautiful visual TV guide — current programme, progress bar, channel logo and upcoming schedule, all in one card.  Requires: What's On TV Integration Pair with: What's On TV — Notify Card to search and set programme alerts
-
-[![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2026.2%2B-41bdf5.svg?style=for-the-badge)](https://www.home-assistant.io/)
-[![HACS Custom](https://img.shields.io/badge/HACS-Custom-41bdf5.svg?style=for-the-badge)](https://hacs.xyz/docs/publish/start)
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-yellow.svg?style=for-the-badge)](https://www.buymeacoffee.com/janfajessen)
-[![Patreon](https://img.shields.io/badge/Patreon-Support-red.svg?style=for-the-badge)](https://www.patreon.com/janfajessen)
 
 
-A Lovelace card that turns your [What's On TV](https://github.com/YOUR_GITHUB_USER/whatson_tv) sensors into a beautiful visual TV guide — current programme, progress bar, channel logo and upcoming schedule, all in one card.
+# What's On TV — EPG Card <br> Lovelace Card
 
-> **Requires:** [What's On TV Integration](https://github.com/YOUR_GITHUB_USER/whatson_tv)
+<img src="https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide/raw/82eeef144435d0eea84c5fd1ebdc7cb73f91689b/whatson_tv_icon.png" alt="What's On TV" width="300">
+
+![Version](https://img.shields.io/badge/version-1.1.0-blue?style=for-the-badge)
+![HA](https://img.shields.io/badge/Home%20Assistant-2024.1+-orange?style=for-the-badge&logo=home-assistant)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Languages](https://img.shields.io/badge/Languages-49-brightgreen?style=for-the-badge)
+[![HACS Custom](https://img.shields.io/badge/HACS-Custom-41bdf5?style=for-the-badge)](https://hacs.xyz/docs/publish/start)
+[![Ko-Fi](https://img.shields.io/badge/Ko--Fi-Support-teal?style=for-the-badge&logo=ko-fi)](https://ko-fi.com/janfajessen)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-yellow?style=for-the-badge&logo=buymeacoffee)](https://www.buymeacoffee.com/janfajessen)
+[![Patreon](https://img.shields.io/badge/Patreon-Support-red?style=for-the-badge&logo=patreon)](https://www.patreon.com/janfajessen)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Support-pink?style=for-the-badge&logo=githubsponsors)](https://github.com/sponsors/janfajessen)
+[![PayPal](https://img.shields.io/badge/PayPal-Donate-blue?style=for-the-badge&logo=paypal)](https://paypal.me/janfajessen)
+
+A Lovelace card that displays your EPG channels in a configurable grid — current programme, progress bar, next programme, and a full schedule modal. Works alongside the [What's On TV Integration](https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide).
+
+> **Requires:** [What's On TV Integration](https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide)
 >
-> **Pair with:** [What's On TV — Notify Card](https://github.com/YOUR_GITHUB_USER/whatsontv-notify-card) to search and set programme alerts
+> **Pair with:** [What's On TV — Search & Notify Card](https://github.com/janfajessen/What-s-On-TV-Search-and-Notify-Card) for keyword alerts and automatic notifications
+
+<img src="https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide/raw/c182f8324b4c54bc2a82bcd817de789b43c2208d/whatsontv_epg_card.png" alt="What's On TV EPG Card" width="150">  <img src="https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide/raw/c182f8324b4c54bc2a82bcd817de789b43c2208d/whatsontv_epg_card_programme.png" alt="What's On TV EPG Card schedule" width="150">
 
 ---
 
 ## Features
 
-- Auto-discovers all EPG sensors from the What's On TV integration
-- Shows **current programme** with live progress bar and channel logo
-- **"Up next"** preview below each channel
-- Click any channel to open a **full schedule modal**
-- **Drag-to-reorder** channels in the editor
-- Dark and light themes
-- Accent colour picker (8 presets + hex/RGB custom)
-- Configurable 2–6 column grid
-- **49 languages** — auto-detected from HA/browser language
+- **Configurable grid** — 2 to 6 columns, adapts to any dashboard layout
+- **Auto-discovery** — detects all `whatson_tv` sensors automatically, no manual setup needed
+- **Per-channel display** — channel logo (with initial fallback), current programme title, start/end times and live progress bar
+- **Next programme** — shows the upcoming title and start time below the progress bar
+- **Full schedule modal** — tap any channel to open a scrollable programme list, with the current programme highlighted and auto-scrolled into view
+- **Drag & drop editor** — reorder channels visually in the card editor, remove individually
+- **Dark and light themes** with 8 accent colour presets + full custom HEX/RGB support
+- **Anti-flicker** — only re-renders when programme data actually changes; progress bars update independently
+- **49 languages** — UI language follows your Home Assistant language setting automatically
 
 ---
 
@@ -35,36 +44,56 @@ A Lovelace card that turns your [What's On TV](https://github.com/YOUR_GITHUB_US
 ### Via HACS (recommended)
 
 1. Open HACS → **Frontend** → ⋮ → **Custom repositories**
-2. Add `https://github.com/YOUR_GITHUB_USER/whatsontv-epg-card` — category **Lovelace**
+2. Add `https://github.com/janfajessen/whatsontv-epg-card` — category **Lovelace**
 3. Search for **What's On TV EPG Card** and install
-4. Add to your dashboard resources (HACS does this automatically)
+4. Refresh your browser
 
 ### Manual
 
 1. Copy `whatsontv-epg-card.js` to `config/www/`
-2. Add as a resource: **Settings → Dashboards → ⋮ → Resources → Add**
-   - URL: `/local/whatsontv-epg-card.js`
-   - Type: JavaScript module
+2. In Home Assistant go to **Settings → Dashboards** → ⋮ → **Resources** → **+ Add Resource**
+3. Set URL to `/local/whatsontv-epg-card.js` and type to **JavaScript module**
+
+> **Tip:** Add `?v=1.1.0` to the URL to force browsers to reload after updates — e.g. `/local/whatsontv-epg-card.js?v=1.1.0`
 
 ---
 
 ## Usage
 
-Add the card to your dashboard:
+### Minimal — auto-discovers all channels
+
+```yaml
+type: custom:whatsontv-epg-card
+```
+
+### Full configuration
 
 ```yaml
 type: custom:whatsontv-epg-card
 title: TV Guide
-columns: 3
 theme: dark
 accent: "#e8872a"
-channels:
-  - La 1.es
-  - La 2.es
-  - Antena 3.es
+columns: 3
+entities:
+  - sensor.epg_la_1
+  - sensor.epg_antena_3
+  - sensor.epg_bbc_one
+  - sensor.epg_rtve_24h
 ```
 
-Or use the visual editor — click **Edit → Add Card → Custom** and search for `whatsontv-epg-card`.
+If `entities` is omitted, the card discovers all sensors provided by the What's On TV integration automatically.
+
+---
+
+## Visual Editor
+
+The card includes a full visual editor accessible from the Lovelace dashboard edit mode:
+
+- **Theme** — toggle between dark and light with a single click
+- **Accent colour** — choose from 8 presets or enter any HEX or RGB value
+- **Title** — customise the card header text
+- **Columns** — set between 2 and 6 columns
+- **Channels** — drag ⠿ to reorder, click ✕ to remove individual channels
 
 ---
 
@@ -72,18 +101,32 @@ Or use the visual editor — click **Edit → Add Card → Custom** and search f
 
 | Option | Type | Default | Description |
 |---|---|---|---|
-| `title` | string | `TV Guide` | Card title |
+| `title` | string | _(none)_ | Card header title. Leave empty to hide the header |
 | `theme` | `dark` / `light` | `dark` | Visual theme |
-| `accent` | string | `#e8872a` | Accent colour (hex or `r,g,b`) |
-| `columns` | 2–6 | `3` | Number of channel columns |
-| `channels` | list | _(all)_ | Channel IDs to display, in order |
+| `accent` | string | `#e8872a` | Accent colour — HEX (`#fa1a00`) or RGB (`200,100,0`) |
+| `columns` | number | `3` | Number of columns in the grid (2–6) |
+| `entities` | list | _(auto)_ | List of EPG sensor entity IDs. If omitted, all sensors are auto-discovered |
+
+---
+
+## Card Icon
+
+The card header displays the What's On TV icon from `/local/whatson_tv_icon.png`. Copy the icon file to your `config/www/` folder to enable it. The integration includes the icon file in the `brands/` folder.
 
 ---
 
 ## Requirements
 
-- Home Assistant 2024.1+
-- [What's On TV Integration](https://github.com/YOUR_GITHUB_USER/whatson_tv) — provides the EPG sensors
+<table border="0" cellspacing="0" cellpadding="10">
+<tr>
+<td valign="middle"><a href="https://www.home-assistant.io/"><img src="https://github.com/janfajessen/What-s-On-TV-Search-and-Notify-Card/blob/b3645cf0af684bdde893675cb4c80660424873ba/home_assistant_logo.png" alt="Home Assistant" width="60"></a></td>
+<td valign="middle"><b><a href="https://www.home-assistant.io/">Home Assistant 2024.1+</a></b></td>
+</tr>
+<tr>
+<td valign="middle"><a href="https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide"><img src="https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide/raw/82eeef144435d0eea84c5fd1ebdc7cb73f91689b/whatson_tv_icon.png" alt="What's On TV" width="60"></a></td>
+<td valign="middle"><b><a href="https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide">What's On TV Integration</a></b> — required for EPG sensors</td>
+</tr>
+</table>
 
 ---
 
