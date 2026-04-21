@@ -112,25 +112,10 @@ The card includes a full visual editor accessible from the Lovelace dashboard ed
 
 ---
 
-## Card Icon
+## 📋 Requirements
 
-The card header displays the What's On TV icon from `/local/whatson_tv_icon.png`. Copy the icon file to your `config/www/` folder to enable it. The integration includes the icon file in the `brands/` folder.
-
----
-
-## Requirements
-
-<table border="0" cellspacing="0" cellpadding="10">
-<tr>
-<td valign="middle"><a href="https://www.home-assistant.io/"><img src="https://github.com/janfajessen/What-s-On-TV-Search-and-Notify-Card/blob/b3645cf0af684bdde893675cb4c80660424873ba/home_assistant_logo.png" alt="Home Assistant" width="60"></a></td>
-<td valign="middle"><b><a href="https://www.home-assistant.io/">Home Assistant 2024.1+</a></b></td>
-</tr>
-<tr>
-<td valign="middle"><a href="https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide"><img src="https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide/raw/82eeef144435d0eea84c5fd1ebdc7cb73f91689b/whatson_tv_icon.png" alt="What's On TV" width="60"></a></td>
-<td valign="middle"><b><a href="https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide">What's On TV Integration</a></b> — required for EPG sensors</td>
-</tr>
-</table>
-
+- Home Assistant 2024.1+
+- [What's On TV Integration](https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide---Home-Assistant) integration installed
 ---
 
 ## License
