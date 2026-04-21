@@ -118,6 +118,15 @@ The card includes a full visual editor accessible from the Lovelace dashboard ed
 - [What's On TV EPG TV Guide](https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide---Home-Assistant) integration installed
 ---
 
+
+*If this integration is useful to you, consider giving it a ⭐ on GitHub.*
+Or consider supporting development!
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-yellow.svg?style=for-the-badge)](https://www.buymeacoffee.com/janfajessen)
+[![Patreon](https://img.shields.io/badge/Patreon-Support-red.svg?style=for-the-badge)](https://www.patreon.com/janfajessen)
+</div>
+
+
 ## License
 
 MIT — see [LICENSE](LICENSE)
