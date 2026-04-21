@@ -115,7 +115,7 @@ The card includes a full visual editor accessible from the Lovelace dashboard ed
 ## 📋 Requirements
 
 - Home Assistant 2024.1+
-- [What's On TV Integration](https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide---Home-Assistant) integration installed
+- [What's On TV EPG TV Guide](https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide---Home-Assistant) integration installed
 ---
 
 ## License
