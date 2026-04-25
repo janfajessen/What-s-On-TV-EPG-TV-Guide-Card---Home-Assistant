@@ -4,7 +4,7 @@
 
 <img src="https://github.com/janfajessen/What-s-On-TV---EPG-TV-Guide/raw/82eeef144435d0eea84c5fd1ebdc7cb73f91689b/whatson_tv_icon.png" alt="What's On TV" width="300">
 
-![Version](https://img.shields.io/badge/version-3.7.1-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-4.8.15-blue?style=for-the-badge)
 ![HA](https://img.shields.io/badge/Home%20Assistant-2024.1+-orange?style=for-the-badge&logo=home-assistant)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Languages](https://img.shields.io/badge/Languages-49-brightgreen?style=for-the-badge)
